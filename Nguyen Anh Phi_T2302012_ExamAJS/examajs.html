@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ExamAJS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Enter text to search">
+            </div>
+            <div class="col-6">
+                <input type="text" class="form-control" placeholder="Search by categories">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="card">
+                    <img src="aspnetmvc.png" class="card-img-top" alt="ASP.NET MVC">
+                    <div class="card-body">
+                        <h5 class="card-title">ASP.NET MVC</h5>
+                        <p class="card-text">Nick Harrison<br><br>ASP.NET View Controller Design pattern to keep the data, views, and logic clearly separated in apps.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="nodejs.png" class="card-img-top" alt="Node.js">
+                    <div class="card-body">
+                        <h5 class="card-title">Node.js</h5>
+                        <p class="card-text">Emanuele DelBono<br><br>SNode.js is a wildly popular platform for writing web applications that has revolutionized web development in many ways.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="reactjs.png" class="card-img-top" alt="React.js">
+                    <div class="card-body">
+                        <h5 class="card-title">React.js</h5>
+                        <p class="card-text">Dimitri Nesteruk<br><br>React is a JavaScript libary that has revolutionized how developers design and think about views in web applications.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <img src="typescript.png" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">TypeScript</h5>
+                        <p class="card-text">Steve Fenton<br><br>Microsoft TypeScript extends many familiar features of .NET programming to JavaScript.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        angular.module('myApp', [])
+        .controller('MyController', ['$scope', function($scope) {
+            $scope.card= [
+                {
+                    title: "ASP.NET MVC",
+                    image: "aspnetmvc.png",
+                    author: "Nick Harrison",
+                    description: "ASP.NET View Controller Design pattern to keep the data, views, and logic clearly separated in apps.",
+                    category: "ASP.NET"
+                },
+                {
+                    title: "Node.js",
+                    image: "nodejs.png",
+                    author: "Emanuele DelBono",
+                    description: "Node.js is a wildly popular platform for writing web applications that has revolutionized web development in many ways.",
+                    category: "JavaScript"
+                },
+                {
+                    title: "React.js",
+                    image: "reactjs.png",
+                    author: "Dimitri Nesteruk",
+                    description: "React is a JavaScript libary that has revolutionized how developers design and think about views in web applications.",
+                    category: "JavaScript"
+                },
+                {
+                    title: "TypeScript",
+                    image: "typescript.png",
+                    author: "Steve Fenton",
+                    description: "Microsoft TypeScript extends many familiar features of .NET programming to JavaScript.",
+                    category: "JavaScript"
+                }
+            ];
+        }]);
+    </script>
+</body>
+</html>
